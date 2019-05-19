@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "name": "markdown",
+  "alias": "abhiomkar.in",
+  "builds": [
+    {
+      "src": "styles/*.css",
+      "use": "@now/static"
+    },
+    {
+      "src": "**/*.md",
+      "use": "@now/md",
+      "config": {
+        "title": "Abhinay Omkar",
+        "language": "en",
+        "meta": [{ "name": "description", "content": "Abhinay Omkar personal website"}],
+        "css": "styles/style.css"
+      }
+    }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/markdown" }
+  ]
+}
